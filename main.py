@@ -24,7 +24,7 @@ while True:
     if event == sg.WINDOW_CLOSED or event == 'Quit':
         break
     # Output a message to the window
-    url = pyshorteners.Shortener(api_key = "cc264b6cfda56d099b750fdf27375056c6951f4a")#bitly api
+    url = pyshorteners.Shortener(api_key = "YOUR API")#bitly api
     
     
     if validators.url(values["-INPUT-"]) :#check the url if valid
