@@ -24,10 +24,11 @@ while True:
     if event == sg.WINDOW_CLOSED or event == 'Quit':
         break
     # Output a message to the window
-    url = pyshorteners.Shortener(api_key = "YOUR API")#bitly api
-   
+    url = pyshorteners.Shortener(api_key = "cc264b6cfda56d099b750fdf27375056c6951f4a")#bitly api
+    
+    
     if validators.url(values["-INPUT-"]) :#check the url if valid
-        window['-OUTPUT-'].update("Url Is Opening In The Browser in 2 Seconds .")
+        window['-OUTPUT-'].update(f"Url => {url.bitly.short(values['-INPUT-'])} ")
         webbrowser.open(url.bitly.short(values['-INPUT-']))#shortning the url
     else:
         window['-OUTPUT-'].update("Invalid Url ! Try Again.")
